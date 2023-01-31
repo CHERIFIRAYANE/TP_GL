@@ -1,0 +1,22 @@
+@import "../../style.scss";
+
+
+
+.home{
+    @include themify($themes){ 
+
+
+        background-color: themed("bgSoft");
+        @include tablet {
+            
+        }
+
+        .space{
+            height: 20px;
+        }
+        
+
+  
+
+    }
+}

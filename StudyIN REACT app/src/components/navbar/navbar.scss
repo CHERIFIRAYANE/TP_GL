@@ -1,0 +1,108 @@
+@import "../../style.scss";
+
+
+.navbar{
+
+    @include themify($themes){
+        
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+    border-bottom: 1px solid rgb(19, 63, 63);
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+    z-index: 999;
+    @include mobile {
+       width: 100vw;
+       justify-content: space-between;
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        @include mobile {
+            justify-content: space-between;
+            gap: 20px;
+        }
+        span{
+            font-weight: bold;
+            font-size: 25px;
+            background: -webkit-linear-gradient(45deg,rgb(66, 251, 242), rgb(7, 61, 58));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+        .search{
+            display:flex ;
+            align-items: center;
+            gap: 10px;
+            border: 1.5px solid rgb(29, 113, 113);
+            border-radius: 8px;
+            padding: 5px;
+            input{
+                border: none;
+                width: 500px;
+                background-color: themed("bg");
+                color: themed("textColor");
+                @include mobile {
+                    display: none;
+                }
+                @include tablet {
+                    width: 200px;
+                }
+
+            }
+            textarea:focus, input:focus{
+                outline: none;
+            }
+
+        }
+        
+        .user{
+
+        }
+        
+    
+    
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        @include mobile {
+            display: none;
+
+        } 
+
+        .user{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            @include tablet {
+                display: none;
+            }
+
+            img{
+                width: 30px;
+                height: 30px;
+                border: 2px solid rgb(35, 102, 102);
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            span{}
+
+        }
+
+
+    }
+
+}
+}
